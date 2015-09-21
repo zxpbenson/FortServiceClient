@@ -1,0 +1,45 @@
+
+1，读取资源授权列表接口
+
+request
+{
+  "operation":"readAuthorization",//操作：读取授权
+  "personAccount":"zhangke"//自然人账号
+}
+
+response
+{
+  "flag":"success",//success fail personNotExists noAuthorization
+  "resultSet":[
+    {
+      "personAccount":"",//自然人账号
+      "resourceIp":"",//资源IP
+      "resourceAccount":""//资源账号
+    },{
+      ...
+    }
+  ]
+}
+
+2，回写访问授权数据接口
+
+request
+{
+  "operation":"writeItilAuthorization"
+  "dataSet":[
+    {
+      "personAccount":"",//自然人账号
+      "resourceIp":"",//资源IP
+      "resourceAccount":"",//资源账号
+      "startDatetime":",//开始时间 "2015-09-19 14:20:00"
+      "endDatetime":""//结束时间 "2015-09-19 14:30:00"
+    },{
+      ...
+    }
+  ]
+}
+
+response
+{
+  "flag":"success"
+}
