@@ -18,7 +18,7 @@ public class Demo {
         //读堡垒机授权DEMO
         ReadAuthorizationRequestVo request1 = new ReadAuthorizationRequestVo();
         request1.setPersonAccount("zhangke");
-        request1.setFortEnv("false");
+        request1.setFortEnv("true");
         ReadAuthorizationResponseVo response1 = FortServiceClient.readAuthorization(request1);
         if(FlagEnum.SUCCESS.getName().equals(response1.getFlag())){
             for(BaseResourceVo vo : response1.getResultSet()){
